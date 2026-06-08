@@ -14,6 +14,10 @@
 
 (컬러 변수는 [src/index.css](src/index.css)의 `:root`에 정의되어 있습니다.)
 
+## 브랜드 에셋
+
+- [public/favicon.svg](public/favicon.svg) — 메인 컬러(다크블루→로열블루 그라데이션) 위에 "CB" 모노그램과 포인트 컬러(다크그린·다크레드) 바를 배치한 브랜드 파비콘
+
 ## 개발 시작하기
 
 ```bash
