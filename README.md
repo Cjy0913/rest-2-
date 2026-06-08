@@ -34,14 +34,19 @@ npm run dev
 
 ## 빌드 & 배포
 
+`main` 브랜치 하나로 운영합니다. 빌드 결과물은 저장소 루트의 `docs/` 폴더에 생성되며,
+GitHub Pages가 이 폴더를 그대로 서빙합니다.
+
 ```bash
-npm run build    # dist/ 에 정적 파일 생성
-npm run deploy   # gh-pages 브랜치로 배포 (GitHub Pages)
+npm run build    # docs/ 에 정적 파일 생성 (vite.config.js의 build.outDir)
+git add docs && git commit -m "Deploy: ..." && git push
 ```
 
 배포 주소: https://Cjy0913.github.io/rest-2-/
-(GitHub 저장소 Settings → Pages → Source를 `gh-pages` 브랜치로 설정해야 합니다.)
+
+> ⚠️ 최초 1회, GitHub 저장소 **Settings → Pages → Build and deployment → Source**를
+> `Deploy from a branch` → Branch: `main` / Folder: `/docs` 로 설정해야 합니다.
 
 ## 개발 기록
 
-진행 상황은 [docs/개발일지.md](docs/개발일지.md)에 기록합니다.
+진행 상황은 [개발일지.md](개발일지.md)에 기록합니다.
