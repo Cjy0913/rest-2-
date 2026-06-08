@@ -1,0 +1,168 @@
+:root {
+  /* 메인 컬러: 다크블루 & 로열블루 */
+  --color-navy: #0b1e3d;
+  --color-navy-deep: #071326;
+  --color-royal: #3b5bdb;
+  --color-royal-light: #6e8bfa;
+
+  /* 포인트 컬러: 다크그린 & 다크레드 */
+  --color-green: #1b5e3f;
+  --color-red: #7a2530;
+
+  /* 배경 & 텍스트 */
+  --color-bg: #f4f6fb;
+  --color-surface: #ffffff;
+  --color-text: #1b2436;
+  --color-text-soft: #5b6478;
+  --color-border: #e1e5ef;
+
+  --shadow-sm: 0 2px 8px rgba(11, 30, 61, 0.06);
+  --shadow-md: 0 12px 32px rgba(11, 30, 61, 0.12);
+
+  --sans: 'Pretendard', system-ui, 'Segoe UI', Roboto, 'Apple SD Gothic Neo', sans-serif;
+
+  font-family: var(--sans);
+  color: var(--color-text);
+  background: var(--color-bg);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100svh;
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+h1, h2, h3, h4 {
+  margin: 0;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--color-navy);
+}
+
+p {
+  margin: 0;
+  color: var(--color-text-soft);
+}
+
+a {
+  color: var(--color-royal);
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  width: min(1120px, 100%);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section {
+  padding: 80px 0;
+}
+
+.section-head {
+  max-width: 640px;
+  margin: 0 0 48px;
+}
+
+.eyebrow {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-royal);
+  margin-bottom: 12px;
+}
+
+.section-head h2 {
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 15px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease, color 0.15s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn-primary {
+  background: var(--color-royal);
+  color: #fff;
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-primary:hover {
+  background: var(--color-navy);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-outline {
+  background: transparent;
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.btn-outline:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: #fff;
+}
+
+.btn-outline-navy {
+  background: transparent;
+  color: var(--color-navy);
+  border-color: var(--color-navy);
+}
+
+.btn-outline-navy:hover {
+  background: var(--color-navy);
+  color: #fff;
+}
+
+@media (max-width: 720px) {
+  .section {
+    padding: 56px 0;
+  }
+  .section-head h2 {
+    font-size: 26px;
+  }
+}
